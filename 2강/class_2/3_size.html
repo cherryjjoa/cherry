@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>html</title>
+	<style>
+		body,
+		h1 {
+			margin: 0
+		}
+
+		.wrap {
+			width: 700px;
+			height: 400px;
+			background: #ccc
+		}
+		.unit{
+			padding: 20px;
+		}
+		.box_input {
+			background-color: white;
+			width: 300px;
+		}
+		.box_input > input {
+			width: calc(100% - 50px);
+			box-sizing: border-box;
+			border: 0;
+			outline: none;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="unit">
+			<div class="box_input">
+				<input>
+				<button>버튼</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

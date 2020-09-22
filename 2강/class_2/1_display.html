@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>html</title>
+	<style>
+		body,
+		h1 {
+			margin: 0
+		}
+
+		a {
+			color: #fff
+		}
+
+		.header {
+			background: #333;
+			color: #fff;
+			padding: 20px;
+		}
+
+		.section {
+			text-align: center;
+			/* padding-top: 30px; */
+		}
+
+		.header h1 {
+			float: left;
+		}
+
+		.header:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.header .nav {
+			float: right;
+			margin-top: 10px;
+		}
+
+		.header .nav>a+a::before {
+			content: "";
+			display: inline-block;
+			width: 1px;
+			height: 10px;
+			background-color: white;
+			margin: 0 10px 0 5px;
+		}
+
+		/* display table 속성 활용 레이아웃 */
+		/* .container {
+			display: table;
+			width: 100%;
+		}
+		.container > div {
+			display: table-cell;
+		}
+		.container .aside {
+			width: 30%;
+			background-color: violet;
+			vertical-align: middle;
+		}
+		.container .section {
+			width: 70%;
+			background-color: pink;
+			height: 500px;
+		} */
+		/* flex 속성 활용 레이아웃 */
+		.container {
+			display: flex;
+		}
+
+		.container .aside {
+			width: 200px;
+			background-color: plum;
+		}
+
+		.container .section {
+			flex: 1;
+			background-color: powderblue;
+			height: 500px;
+		}
+
+		/* float 정렬 */
+		.section .box {
+			width: 100px;
+			height: 100px;
+			background-color: lightseagreen;
+			float: left;
+		}
+
+		.section .box:nth-child(2) {
+			float: right;
+		}
+
+		/* .section .box {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			background-color: lightpink;
+		} */
+		/* flex를 이용한 테이블 만들기 */
+		.tb {
+			padding: 20px;
+		}
+
+		.tb .row {
+			display: flex;
+		}
+
+		.tb .row. label {
+			background-color: #eee;
+			width: 100px;
+			padding: 10px;
+			text-align: left;
+			border-bottom: 1px solid #eee;
+		}
+		.tb .row .con {
+			background-color: #fff;
+			flex: 1px;
+			padding: 10px;
+			text-align: left;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="header">
+		<h1>logo</h1>
+		<div class="nav">
+			<a href="#">menu1</a>
+			<a href="#">menu2</a>
+			<a href="#">menu3</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="aside"></div>
+		<div class="section">
+			<div class="tb">
+				<div class="row">
+					<div class="label">
+						이름
+					</div>
+					<div class="con">
+						<input />
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="label">
+					전화번호
+				</div>
+				<div class="con">
+					<input />
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

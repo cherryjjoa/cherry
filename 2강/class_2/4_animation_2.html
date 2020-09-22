@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>html</title>
+	<style>
+		body,
+		h1 {
+			margin: 0
+		}
+
+		a {
+			color: #fff
+		}
+
+		.header {
+			background: #333;
+			color: #fff;
+			padding: 20px;
+		}
+
+		.visual {
+			text-align: center;
+			padding-top:50px;
+		}
+		.visual .unit .txt_tit{
+			font-size:50px;
+			color: slateblue;
+		}
+		.visual .unit .txt_subs_1{
+			font-size: 30px;
+		}
+		.visual .unit .txt_subs_2{
+			font-size: 20px;
+		}
+		.visual .unit {
+			animation: txt_ani 10s infinite;
+			opacity: 0;
+			margin-top:100px;
+			position:absolute;
+			width: 100%;
+		}
+		.visual .unit:nth-child(2) {
+			animation-name:txt_ani2;
+		}
+		@keyframes txt_ani {
+			0%{opacity: 0; margin-top:100px;}
+			10%{opacity: 1;margin-top:0px}
+			40%{opacity: 1; margin-top:0px;}
+			50%{opacity:0; margin-top:100px;}
+		}
+		@keyframes txt_ani2 {
+			50%{opacity: 0; margin-top:100px;}
+			60%{opacity: 1;margin-top:0px}
+			90%{opacity: 1; margin-top:0px;}
+			100%{opacity:0; margin-top:100px;}
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="header">
+		<h1>logo</h1>
+		<div class="nav">
+			<a href="#">menu1</a>
+			<a href="#">menu2</a>
+			<a href="#">menu3</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="section visual">
+			<div class="unit">
+				<strong class="txt_tit">첫번째 문구</strong>
+				<p class="txt_subs_1">첫번째 문구의 애니메이션 예제 입니다.</p>
+				<p class="txt_subs_2">첫번째 문구의 애니메이션 예제 입니다.</p>
+			</div>
+			<div class="unit">
+				<strong class="txt_tit">두번째 문구</strong>
+				<p class="txt_subs_1">두번째 문구의 애니메이션 예제 입니다.</p>
+				<p class="txt_subs_2">두번째 문구의 애니메이션 예제 입니다.</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
