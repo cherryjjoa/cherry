@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+        .header .logo {
+            width: 239px;
+            height: 65px;
+            margin: 0 auto;
+            background: url(img/img_top_logo.png) no-repeat;
+        }
+
+        .product_list {
+            margin-top: 100px;
+        }
+
+        .product_list>li {
+            float: left;
+            width: 33.3%;
+            height: 212px;
+            text-align: center;
+            position: relative;
+        }
+
+        .product_list>li>.product {
+            width: 461px;
+            height: 246px;
+            display: inline-block;
+            background: url(img/img_product_1.png) no-repeat -100px 0;
+            margin-top: -34px;
+
+
+        }
+
+        .product_list>li:nth-child(2) .product {
+            background: url(img/img_product_2.png) no-repeat -100px 0;
+        }
+
+        .product_list>li:nth-child(3) .product {
+            background: url(img/img_product_3.png) no-repeat -100px 0;
+            margin-top: 0;
+        }
+
+        .product_list>li:nth-child(1) {
+            background: #85d3e7;
+        }
+
+        .product_list>li:nth-child(2) {
+            background: #8fd2a6;
+        }
+
+        .product_list>li:nth-child(3) {
+            background: #7fcac6;
+        }
+
+        .product_list>li .txt {
+            width: 186px;
+            height: 122px;
+            display: inline-block;
+            background: url(img/img_txt_1.png) no-repeat;
+            position: absolute;
+            top: 45px;
+            left: 50%;
+        }
+
+        .product_list>li:nth-child(2) .txt {
+            background: url(img/img_txt_2.png) no-repeat;
+        }
+
+        .product_list>li:nth-child(3) .txt {
+            background: url(img/img_txt_3.png) no-repeat;
+        }
+        @media all and (max-width: 1100px){
+            .product_list > li {
+                float: none; /*float 해제*/
+                width: auto;
+            }
+            .product_list > li + li {
+                margin-top: 60px;
+            }
+        }     
+        @media all and (max-width: 485px){
+            .product_list>li .product {
+                width: 100%;
+                background-position: -180px 0 !important;
+            }
+            .product_list>li .txt{
+                left:auto; /*left 해제*/
+                right: 10px;
+            }
+
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1 class="logo"></h1>
+        </div>
+        <!-- header 끝-->
+
+        <div class="container">
+            <ul class="product_list">
+                <li>
+                    <span class="product"></span>
+                    <span class="txt"></span>
+                </li>
+                <li>
+                    <span class="product"></span>
+                    <span class="txt"></span>
+                </li>
+                <li>
+                    <span class="product"></span>
+                    <span class="txt"></span>
+                </li>
+
+            </ul>
+        </div>
+        <!-- container 끝 -->
+
+    </div>
+</body>
+
+</html>

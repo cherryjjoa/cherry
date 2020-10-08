@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="css/fullpage.css" rel="stylesheet" type="text/css" />
+		<link href="css/03_fullpage.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/fullpage.js"></script>
+		
+		<script>
+			$(function(){
+			$(".wrap").fullpage({
+				navigation:true, //내비게이션 유무
+				navigationPosition:"left", //내비게이션 위치
+				sectionsColor:["#888", "#4bbfc3", "#7baade", "#666"], //각 섹션 배경색
+				navigationTooltips:["1번", "2번", "3번", "4번"], //내이게이션 텍스트
+				showActiveTooltip:true //내비게이션 선택메뉴 활성화
+			});
+			})
+		</script>
+		<style>
+			.section {
+				text-align: center;
+				font-size: 50px;
+				font-weight: bold;
+				color: #fff;
+				text-shadow: 2px 2px 3px rgba(0,0,0,.3);
+				/*           가로세로 blur  색상  r g b alpha투명도  */
+			}
+		</style>
+
+  </head>
+  <body>
+    <div class="wrap">
+		<div class="section"> section 1 </div>
+		<div class="section"> section 2 </div>
+		<div class="section"> section 3 </div>
+		<div class="section"> section 4 </div>
+	</div>
+  </body>
+</html>
