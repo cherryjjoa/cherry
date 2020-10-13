@@ -4,6 +4,7 @@
     padding: 5px;
     font-size: 13px;
     color: #333;
+    box-sizing: border-box;
 }
 /* 채팅창 */
 .chat_area {
@@ -91,9 +92,17 @@
     .wrap {
         width: auto;
         border: 0;
+        font-size: 15px;
     }
+    /* html, body, .wra{height: 100%;} */
     .chat_area {
         height: calc(100vh - 80px);
         box-sizing: border-box;
+    }
+    .chat_area .item .box .time {
+        font-size: 13px;
+    }
+    .input_area input[type="text"] {
+        font-size: 15px;
     }
 }
