@@ -18,10 +18,13 @@
 				auto:true, //자동슬라이드
 				pause:3000, //자동슬라이드 인터벌 시간
 				speed:2000, //슬라이드 스피드
-				controls:false, //좌우버튼 유무
+				controls:true, //좌우버튼 유무
 				pager:false, //밑에 동그라미 유무
-				mode:"fade" //이미지 전환효과
-				onSlideAfter:
+				//mode:"fade", //이미지 전환효과
+				onSlideAfter:function($slideElement, oldIndex, newIndex){
+					$(".section.visual ul > li").removeClass("on");
+					$slideElement.addClass("on");
+				}
 			});
 
 			//하단 상품 3개씩 정렬한 배너
@@ -66,7 +69,7 @@
 				<ul>
 					<li class="unit">
 						<a href="#">
-							<img src="images/product_01.png" class="img" />
+							<img src="images/product_01.png" class="img" alt="dddd"/>
 							<p class="name">상품1</p>
 						</a>
 					</li>

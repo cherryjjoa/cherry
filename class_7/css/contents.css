@@ -1,0 +1,88 @@
+.wrap {
+    border: 1px solid #999;
+    width: 300px;
+    padding: 5px;
+    font-size: 13px;
+    color: #333;
+}
+/* 채팅창 */
+.chat_area {
+    height: 350px;
+    background-color: #acc2d2;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto; /* 채팅이 길어지면 스크롤 생기게(대화창안에 해결)*/ 
+}
+
+/* 메시지 */
+.chat_area .item {
+
+}
+.chat_area .item + .item {
+    margin-top: 15px;
+}
+.chat_area .item .box {
+    display: inline-block;
+    max-width: 180px;
+    position: relative;
+}
+.chat_area .item .box:before{
+    content: '';
+    display:block;
+    border-top: 0 solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #fff;
+    position: absolute;
+    left: -8px;
+    top: 9px;
+}
+.chat_area .item .box .msg {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+}
+.chat_area .item .box .time {
+    position: absolute;
+    width: 70px; /*시간박스 제어할라고*/
+    right: -75px;
+    bottom: 3px;
+    font-size: 11px;
+    color: #999;
+}
+
+/* 나의 메시지 */
+.chat_area .item.mymsg{
+    text-align: right;
+}
+.chat_area .item.mymsg .box .msg{
+    background-color: #fee600;
+}
+.chat_area .item.mymsg .box:before {
+    border-right: 0;
+    border-left: 8px solid #fee600;
+    left: auto;
+    right: -8px;
+}
+.chat_area .item.mymsg .box .time{
+    right: auto;
+    left: -75px;
+}
+
+/* 입력창 */
+.input_area {
+    margin-top:5px;
+}
+.input_area input[type="text"] {
+    border: 0;
+    background-color: #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 5px;
+}
+.input_area input[type="text"]:first-child {
+    margin-bottom: 5px;
+}
+.input_area input[type="text"]::placeholder {
+    color: #999;
+}
